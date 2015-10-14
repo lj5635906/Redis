@@ -17,7 +17,7 @@ public class RedisPubAndSub extends BaseRedis {
 	public static Jedis getJedis() {
 		return BaseRedis.getJedis();
 	}
-
+	
 	/**
 	 * redis消息发布
 	 * 

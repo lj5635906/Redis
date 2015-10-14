@@ -52,7 +52,7 @@ public class RedisSocketConnectionToRedisStream {
 			outputStream.writeIntCrLf(command.length);
 			outputStream.write(command);
 			outputStream.writeCrLf();
-
+			
 			for (final byte[] arg : args) {
 				outputStream.write(DOLLAR_BYTE);
 				outputStream.writeIntCrLf(arg.length);
