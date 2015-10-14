@@ -28,9 +28,9 @@ public class RedisSocketToStream {
 		RedisFileInputStream is = null;
 		try {
 			socket.setReuseAddress(true);
-			socket.setKeepAlive(true); // Will monitor the TCP connection is
-			socket.setTcpNoDelay(true); // Socket buffer Whetherclosed, to
-			socket.setSoLinger(true, 0); // Control calls close () method,
+			socket.setKeepAlive(true); 
+			socket.setTcpNoDelay(true);
+			socket.setSoLinger(true, 0);
 			socket.connect(new InetSocketAddress(host, port), timeout);
 			socket.setSoTimeout(timeout);
 			
@@ -41,7 +41,7 @@ public class RedisSocketToStream {
 		}
 				
 		// 操作命令
-		String command = "DEL";
+		String command = "SET";
 		// 操作字符
 		String[] strs = { "pwd", "password123" };
 		// 转换后的操作字符

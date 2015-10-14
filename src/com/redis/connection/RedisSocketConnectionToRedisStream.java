@@ -35,8 +35,8 @@ public class RedisSocketConnectionToRedisStream {
 			RedisInputStream inputStream = new RedisInputStream(
 					socket.getInputStream());
 			
-			String action = "SET";
-			String[] key = { "test","testCommand" };
+			String action = "GET";
+			String[] key = { "test" };
 
 			byte[][] args = new byte[key.length][];
 			for (int i = 0; i < key.length; i++) {
