@@ -92,7 +92,7 @@ public class RedisSocketToStream {
 			// 获取返回值
 			byte[] inputByte = new byte[8198];
 			is.read(inputByte);
-			System.out.println(SafeEncoder.encode(inputByte));
+			System.out.println("返回值  : "+SafeEncoder.encode(inputByte));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

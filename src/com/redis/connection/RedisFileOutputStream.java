@@ -187,8 +187,6 @@ public class RedisFileOutputStream extends FilterOutputStream{
 			size++;
 		
 		size++;
-		System.out.println("buf.length : " + buf.length);
-		System.out.println("count : " + count);
 		if (size >= buf.length - count) {
 			flushBuffer();
 		}
@@ -203,11 +201,9 @@ public class RedisFileOutputStream extends FilterOutputStream{
 			buf[--charPos] = DigitOnes[r];
 			buf[--charPos] = DigitTens[r];
 		}
-		System.out.println("charPos : " + charPos);
 		for (;;) {
 			q = (value * 52429) >>> (16 + 3);
 			r = value - ((q << 3) + (q << 1));
-			System.out.println("digits[r] : " + digits[r]);
 			buf[--charPos] = digits[r];
 			value = q;
 			if (value == 0)
