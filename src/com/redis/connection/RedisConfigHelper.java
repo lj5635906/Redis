@@ -48,6 +48,8 @@ public class RedisConfigHelper {
 			// 最大空闲连接数
 			config.setMaxIdle(Integer.valueOf(getResourceBundle().getString(
 					"redis.pool.maxIdle")));
+			config.setMinIdle(Integer.valueOf(getResourceBundle().getString(
+					"redis.pool.minIdle")));
 			// 获取连接时的最大等待毫秒数(如果设置为阻塞时BlockWhenExhausted),如果超时就抛异常, 小于零:阻塞不确定的时间,
 			// 默认-1
 			config.setMaxWaitMillis(Long.valueOf(getResourceBundle().getString(

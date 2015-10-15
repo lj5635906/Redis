@@ -12,9 +12,9 @@ public class Pub {
 		final String channer = "testChannel";
 		
 		
-		PubSubListener pubSub = new PubSubListener();
-		RedisPubAndSub.subscriber(pubSub, channer);
-		
+//		PubSubListener pubSub = new PubSubListener();
+//		RedisPubAndSub.subscriber(pubSub, channer);
+//		
 //		new Thread(new Runnable(){  
 //			PubSubListener pubSub = new PubSubListener();
 //            public void run() {  
