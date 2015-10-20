@@ -1,7 +1,7 @@
 package com.redis.simple;
 
 import redis.clients.jedis.Jedis;
-import com.redis.listener.PubSubListener;
+import redis.clients.jedis.JedisPubSub;
 import com.redis.simple.base.BaseRedis;
 
 /**
@@ -13,7 +13,7 @@ public class RedisPubAndSub extends BaseRedis {
 
 	private RedisPubAndSub() {
 	}
-
+	
 	public static Jedis getJedis() {
 		return BaseRedis.getJedis();
 	}
@@ -40,7 +40,7 @@ public class RedisPubAndSub extends BaseRedis {
 	 * @param channels
 	 *            订阅频道
 	 */
-	public static void subscriber(PubSubListener pubSub,String... channels) {
+	public static void subscriber(JedisPubSub pubSub,String... channels) {
 		Jedis jedis = getJedis();
 		jedis.subscribe(pubSub, channels);
 	}
@@ -51,7 +51,7 @@ public class RedisPubAndSub extends BaseRedis {
 	 * @param patterns
 	 *            订阅模式
 	 */
-	public static void psubscriber(PubSubListener pubSub,String... patterns) {
+	public static void psubscriber(JedisPubSub pubSub,String... patterns) {
 		Jedis jedis = getJedis();
 		jedis.psubscribe(pubSub, patterns);
 	}
