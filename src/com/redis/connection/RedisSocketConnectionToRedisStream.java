@@ -17,8 +17,8 @@ public class RedisSocketConnectionToRedisStream {
 
 	public static void main(String[] mains) {
 
-		String host = "192.168.20.217";
-		int port = 6379;
+		String host = "192.168.20.110";
+		int port = 7000;
 		int timeout = 2000;
 		try {
 			
@@ -35,8 +35,8 @@ public class RedisSocketConnectionToRedisStream {
 			RedisInputStream inputStream = new RedisInputStream(
 					socket.getInputStream());
 			
-			String action = "GET";
-			String[] key = { "test" };
+			String action = "SET";
+			String[] key = { "DATE","2015-11-11" };
 
 			byte[][] args = new byte[key.length][];
 			for (int i = 0; i < key.length; i++) {
@@ -59,7 +59,6 @@ public class RedisSocketConnectionToRedisStream {
 				outputStream.write(arg);
 				outputStream.writeCrLf();
 			}
-
 			outputStream.flush();
 
 			inputStream.readByte();

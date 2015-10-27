@@ -13,7 +13,7 @@ public class Log {
 	 * @param str
 	 */
 	public static void debug(Object str) {
-		System.err.println(str);
+//		System.err.println(str);
 	}
 
 	/**
@@ -22,7 +22,7 @@ public class Log {
 	 * @param str
 	 */
 	public static void info(Object str) {
-		System.err.println(str);
+//		System.err.println(str);
 	}
 
 	/**
@@ -31,7 +31,7 @@ public class Log {
 	 * @param str
 	 */
 	public static void warn(Object str) {
-		System.err.println(str);
+//		System.err.println(str);
 	}
 
 	/**
@@ -40,7 +40,7 @@ public class Log {
 	 * @param str
 	 */
 	public static void error(Object str) {
-		System.err.println(str);
+//		System.err.println(str);
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class Log {
 	 * @param str
 	 */
 	public static void fatal(Object str) {
-		System.err.println(str);
+//		System.err.println(str);
 	}
 
 	/**
